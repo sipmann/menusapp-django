@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django APP</title>
+    <style>
+        body {
+            font-family: arial;
+            background: #E7E7E7;
+        }
+
+        .content {
+            padding: 10px 10px 50px 10px;
+            background: white;
+            border-radius: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+        /* templatetag css */
+        .menu {
+            margin:0;
+            padding:0;
+        }
+
+        .menu li {
+            float: left;
+            list-style: none;
+            padding: 10px;
+        }
+
+        .menu:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        
+
+        <hr>
+
+        {% block conteudo %}
+        {% endblock %}
+    </div>
+</body>
+</html>
