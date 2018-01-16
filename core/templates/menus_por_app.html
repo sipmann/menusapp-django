@@ -1,0 +1,16 @@
+{% if not lst_apps %}
+  <p>Nenhuma app</p>
+{% else %}
+  <ul class="menu">
+    {% for app in lst_apps %}
+      {% with app.name|add:":listagem" as link %}
+        {% url link as the_url %}
+          {% if the_url %}
+          <li>
+              <a href="{% url link %}">{{ app.verbose_name|truncatechars:30 }}</a>
+          </li>
+          {% endif %}
+      {% endwith %}
+    {% endfor %}
+  </ul>
+{% endif %}
